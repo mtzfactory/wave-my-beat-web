@@ -1,0 +1,104 @@
+$SKY: #CAEBF2;
+$CARBON: #A9A9A9;
+$WATERMELON: #FF3B3F;
+$NEUTRAL: #EFEFEF;
+$BLODY: #E91E63;
+$FOOTER_HEIGHT: 32px;
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    background-color: $NEUTRAL;
+}
+
+ul { margin: 0; padding: 0; }
+
+.container { min-height: 100%; position:relative; }
+.content { padding-bottom: $FOOTER_HEIGHT; }
+
+//
+.table {
+    display: table;
+    width: 100%;
+}
+
+.cel-1-2 {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 50%;
+}
+
+/*
+ -- HEADER
+ */
+ header.header {
+    margin: 0 30px;
+    padding: 30px 0;
+
+    & > ul.nav {
+        list-style: none;
+        text-align: center;
+
+        & > li { display: inline-block; margin-left: 1rem; }
+        & > li:before { content: "/"; padding-right: 1rem; font-size: 0.6rem; }
+        & > li:first-of-type:before { content: ""; padding-right: 0; }
+
+        & a { padding: 5px 1rem; text-decoration: none; }
+        & a:hover { background: rgba(0, 0, 0, 0.05); border-bottom: solid 2px $BLODY; }
+        & a:focus { color: gold; }
+    }
+}
+
+section.landing {
+    h1, h3 {
+        text-align: center;
+    }
+}
+
+section.contact {
+    h1, h3 {
+        text-align: center;
+    }
+}
+
+section.screenshoots {
+    h1, h3 {
+        text-align: center;
+    }
+}
+
+/*
+ -- FOOTER
+ */
+footer.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: $FOOTER_HEIGHT;
+    margin-bottom: 16px;
+    text-align: center;
+
+    p, p a { font-size: 12px; }
+    a { color: black; text-decoration: none; }
+    a.text:hover { padding: 5px 0; background: rgba(0, 0, 0, 0.05);  border-bottom: solid 2px $BLODY; }
+    i.red { color: $BLODY; }
+    & .left { float: left; }
+    & .right { float: right;}
+    & ul {
+        list-style: none;
+        & li {
+            display: inline-block; margin-left: 3rem; 
+            & > a.ico:hover { color: #0375B4; border-bottom: solid 2px $BLODY; }
+        }
+        & > li:first-of-type { margin-left: 0; }
+        & li > i:hover { color: $BLODY }
+    }
+}
