@@ -1,15 +1,13 @@
+[![Skylab-coders](https://mtzfactory.github.io/logos/png/skylab-coders.png)](http://www.skylabcoders.com/)
+![nodejs](https://mtzfactory.github.io/logos/png-2/nodejs.png)
+![express](https://mtzfactory.github.io/logos/png-2/express.png)
+![passport](https://mtzfactory.github.io/logos/png-2/passport.png)
+![mongodb](https://mtzfactory.github.io/logos/png-2/mongodb.png)
+![html-5](https://mtzfactory.github.io/logos/png-2/html-5.png)
+![css-3](https://mtzfactory.github.io/logos/png-2/css-3.png)
 
-heroku config:set API_PORT=3001
-heroku config:unset API_PORT
+## WAVE MY BEAT ~ api server.
 
-heroku config:set API_SECRET="8-RtXMVpwZ*D89*Y"
-heroku config:set MONGO_HOST=ds251435.mlab.com
-heroku config:set MONGO_PORT=51435
-heroku config:set MONGO_DB=music_share
-heroku config:set MONGO_USER=admin
-heroku config:set MONGO_PASS=skylab_Rocks-17
-heroku config:set JAMENDO_CLIENT_ID=811adea3
-heroku config:set JAMENDO_CLIENT_SECRET=bc82cc1de7fecacb8982c30b0f481465
-heroku config
+### INSTALACION
 
-https://designschool.canva.com/blog/website-color-schemes/
+### TEST
