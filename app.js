@@ -25,6 +25,9 @@ const app = express()
 app.use(express.static('public'))
 app.set('view engine', 'pug')
 
+// FAVICON
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+
 // REGISTER OUR ROUTES -------------------------------
 // routes for the open web
 app.use('/', require('./routes'))
