@@ -1,5 +1,6 @@
 const express = require('express')
-const favicon = require('favicon')
+const favicon = require('express-favicon')
+const path = require('path')
 const moment = require('moment')
 const debug = require('debug')('app')
 
