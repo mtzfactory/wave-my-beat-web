@@ -1,4 +1,5 @@
 const express = require('express')
+const favicon = require('favicon')
 const moment = require('moment')
 const debug = require('debug')('app')
 
