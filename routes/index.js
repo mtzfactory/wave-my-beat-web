@@ -16,24 +16,24 @@ if (DEBUG) {
 }
 
 const anchors = [
-    {link: '/', text: 'Home' },
-    {link: '/contact', text: 'Contact' },
-    {link: '/screenshoots', text: 'Screenshoots' }
+    {link: '/', text: 'home' },
+    {link: '/howitfeels', text: 'how it feels' },
+    {link: '/contact', text: 'contact' }
 ]
 
 web.get('/', (req, res) => {
     const CURRENT = 'home'
-    res.render(CURRENT, { title: 'Wave my beat ~ Home', anchors: anchors, current: CURRENT })
+    res.render(CURRENT, { title: 'Wave my beat', anchors: anchors, current: CURRENT })
+})
+
+web.get('/howitfeels', (req, res) => {
+    const CURRENT = 'howitfeels'
+    res.render(CURRENT, { title: 'Wave my beat', anchors: anchors, current: CURRENT })
 })
 
 web.get('/contact', (req, res) => {
     const CURRENT = 'contact'
-    res.render(CURRENT, { title: 'Wave my beat ~ Contact', anchors: anchors, current: CURRENT })
-})
-
-web.get('/screenshoots', (req, res) => {
-    const CURRENT = 'screenshoots'
-    res.render(CURRENT, { title: 'Wave my beat ~ Screenshoots', anchors: anchors, current: CURRENT })
+    res.render(CURRENT, { title: 'Wave my beat', anchors: anchors, current: CURRENT })
 })
 
 module.exports = web

@@ -1,5 +1,7 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Pompiere|Quicksand|Rubik+Mono+One");
 * {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   box-sizing: border-box; }
 
@@ -23,11 +25,25 @@ ul {
   display: table;
   width: 100%; }
 
-.cel-1-2 {
+.cel {
   display: table-cell;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: middle; }
+
+.cel-1-2 {
   width: 50%; }
+  .cel-1-2 > h1, .cel-1-2 h2, .cel-1-2 h3 {
+    margin: 0; }
+
+.cel-1-3 {
+  width: 33.3%; }
+  .cel-1-3 > h1, .cel-1-3 h2, .cel-1-3 h3 {
+    margin: 0; }
+
+.cel-2-3 {
+  width: 66.6%; }
+  .cel-2-3 > h1, .cel-2-3 h2, .cel-2-3 h3 {
+    margin: 0; }
 
 /*
  -- HEADER
@@ -35,26 +51,26 @@ ul {
 header.header {
   margin: 0 30px;
   padding: 30px 0; }
-  header.header > ul.nav {
+  header.header ul.nav {
     list-style: none;
     text-align: center; }
-    header.header > ul.nav > li {
+    header.header ul.nav > li {
       display: inline-block;
       margin-left: 1rem; }
-    header.header > ul.nav > li:before {
+    header.header ul.nav > li:before {
       content: "/";
       padding-right: 1rem;
       font-size: 0.6rem; }
-    header.header > ul.nav > li:first-of-type:before {
+    header.header ul.nav > li:first-of-type:before {
       content: "";
       padding-right: 0; }
-    header.header > ul.nav a {
+    header.header ul.nav a {
       padding: 5px 1rem;
       text-decoration: none; }
-    header.header > ul.nav a:hover {
+    header.header ul.nav a:hover {
       background: rgba(0, 0, 0, 0.05);
       border-bottom: solid 2px #E91E63; }
-    header.header > ul.nav a:focus {
+    header.header ul.nav a:focus {
       color: gold; }
 
 section.landing h1, section.landing h3 {
@@ -64,6 +80,26 @@ section.contact h1, section.contact h3 {
   text-align: center; }
 
 section.screenshoots h1, section.screenshoots h3 {
+  text-align: center; }
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.5); }
+  .jumbotron > h1 {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 48px;
+    font-family: 'Rubik Mono One', sans-serif;
+    font-weight: bold; }
+
+.info {
+  margin-top: 3rem; }
+
+p.center {
   text-align: center; }
 
 /*
