@@ -6,5 +6,5 @@ if (!PORT)
 
 module.exports = {
     DEBUG,
-    WEB_PORT
+    PORT
 }

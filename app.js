@@ -5,7 +5,7 @@ const debug = require('debug')('app')
 require('dotenv').config()
 const {
     DEBUG,
-    WEB_PORT
+    PORT
 } = require('./constants')
 
 if (DEBUG)
