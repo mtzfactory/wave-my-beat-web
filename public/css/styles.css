@@ -16,7 +16,16 @@ ul {
 
 .container {
   min-height: 100%;
-  position: relative; }
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(239, 239, 239, 0.8) 0%, rgba(239, 239, 239, 0.8) 100%), url("../images/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
 
 .content {
   padding-bottom: 32px; }
@@ -51,6 +60,8 @@ ul {
 header.header {
   margin: 0 30px;
   padding: 30px 0; }
+  header.header h3 {
+    color: black; }
   header.header ul.nav {
     list-style: none;
     text-align: center; }
@@ -66,21 +77,63 @@ header.header {
       padding-right: 0; }
     header.header ul.nav a {
       padding: 5px 1rem;
-      text-decoration: none; }
+      text-decoration: none;
+      color: black; }
     header.header ul.nav a:hover {
-      background: rgba(0, 0, 0, 0.05);
+      background: rgba(0, 0, 0, 0.1);
       border-bottom: solid 2px #E91E63; }
     header.header ul.nav a:focus {
-      color: gold; }
+      color: #42423f; }
 
-section.landing h1, section.landing h3 {
+section.landing h1, section.landing h2, section.landing h3 {
   text-align: center; }
+section.landing > h1 {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 32px;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-weight: bold; }
+section.landing .images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; }
+section.landing img {
+  margin: 0 20px 0 20px; }
 
-section.contact h1, section.contact h3 {
+section.screenshoots h1, section.screenshoots h2, section.screenshoots h3 {
   text-align: center; }
+section.screenshoots .images {
+  display: flex;
+  height: calc(100% - 110px);
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; }
+section.screenshoots img {
+  margin: 20px; }
 
-section.screenshoots h1, section.screenshoots h3 {
+section.contact h1, section.contact h2, section.contact h3 {
   text-align: center; }
+section.contact form {
+  max-width: 600px;
+  margin: 20px auto; }
+  section.contact form .form-group {
+    margin-top: 1em; }
+  section.contact form input, section.contact form textarea {
+    border: 0;
+    outline: 0;
+    padding: 1em;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    resize: none; }
+  section.contact form #input-submit {
+    color: white;
+    background: #009688;
+    cursor: pointer;
+    margin-top: 30px; }
+  section.contact form textarea {
+    height: 232px; }
 
 .jumbotron {
   display: flex;
@@ -88,16 +141,22 @@ section.screenshoots h1, section.screenshoots h3 {
   align-items: center;
   justify-content: center;
   height: 300px;
-  margin-top: 2rem;
-  background-color: rgba(255, 255, 255, 0.5); }
+  margin-top: 2rem; }
   .jumbotron > h1 {
     color: rgba(0, 0, 0, 0.5);
     font-size: 48px;
     font-family: 'Rubik Mono One', sans-serif;
     font-weight: bold; }
+  .jumbotron ul {
+    list-style: none; }
+    .jumbotron ul > li {
+      margin-top: 15px; }
 
 .info {
   margin-top: 3rem; }
+
+p.title {
+  margin: 80px 0 30px 0; }
 
 p.center {
   text-align: center; }
@@ -114,6 +173,7 @@ footer.footer {
   margin-bottom: 16px;
   text-align: center; }
   footer.footer p, footer.footer p a {
+    color: black;
     font-size: 12px; }
   footer.footer a {
     color: black;
@@ -140,5 +200,40 @@ footer.footer {
       margin-left: 0; }
     footer.footer ul li > i:hover {
       color: #E91E63; }
+
+/*  */
+.half {
+  float: left;
+  width: 48%;
+  margin-bottom: 1em; }
+
+.right {
+  width: 50%; }
+
+.left {
+  margin-right: 2%; }
+
+@media (max-width: 620px) {
+  .half {
+    width: 100%;
+    float: none;
+    margin-bottom: 0; }
+
+  section.contact p.title {
+    margin: 10px 0 10px 0; }
+  section.contact form {
+    margin: 20px 20px 0 20px; }
+    section.contact form textarea {
+      height: 142px; } }
+/* Clearfix */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
 
 /*# sourceMappingURL=styles.css.map */

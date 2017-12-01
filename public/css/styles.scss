@@ -8,6 +8,7 @@ $NEUTRAL: #EFEFEF;
 $BLODY: #E91E63;
 $BLUE_STEEL: #0375B4;
 $FOOTER_HEIGHT: 32px;
+$GREEN: #009688;
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -23,7 +24,21 @@ html, body{
 
 ul { margin: 0; padding: 0; }
 
-.container { min-height: 100%; position:relative; }
+.container {
+    min-height: 100%;
+    position: relative;
+
+    background-image: linear-gradient(to bottom, rgba(239,239,239,0.8) 0%,rgba(239,239,239,0.8) 100%), url('../images/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+}
 .content { padding-bottom: $FOOTER_HEIGHT; }
 
 //
@@ -46,6 +61,8 @@ ul { margin: 0; padding: 0; }
     margin: 0 30px;
     padding: 30px 0;
 
+    & h3 { color: black }
+
     & ul.nav {
         list-style: none;
         text-align: center;
@@ -54,28 +71,82 @@ ul { margin: 0; padding: 0; }
         & > li:before { content: "/"; padding-right: 1rem; font-size: 0.6rem; }
         & > li:first-of-type:before { content: ""; padding-right: 0; }
 
-        & a { padding: 5px 1rem; text-decoration: none; }
-        & a:hover { background: rgba(0, 0, 0, 0.05); border-bottom: solid 2px $BLODY; }
-        & a:focus { color: gold; }
+        & a { padding: 5px 1rem; text-decoration: none; color: black }
+        & a:hover { background: rgba(0, 0, 0, 0.1); border-bottom: solid 2px $BLODY; }
+        & a:focus { color: rgb(66, 66, 63); }
     }
 }
 
 section.landing {
-    h1, h3 {
+    h1, h2, h3 {
         text-align: center;
     }
-}
-
-section.contact {
-    h1, h3 {
-        text-align: center;
+    & > h1 {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 32px;  
+        font-family: 'Rubik Mono One', sans-serif;
+        font-weight: bold;
+    }
+    .images {
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    img {
+        margin: 0 20px 0 20px;
     }
 }
 
 section.screenshoots {
-    h1, h3 {
+    h1, h2, h3 {
         text-align: center;
     }
+    .images {
+        display: flex;
+        height: calc(100% - 110px); // 60px = header, 50px footer
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    img {
+        margin: 20px;
+    }
+}
+
+section.contact {
+    h1, h2, h3 {
+        text-align: center;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 20px auto;
+
+        & .form-group { margin-top: 1em; }
+
+        & input, & textarea {
+            border:0; outline:0;
+            padding: 1em;
+            border-radius: 8px;
+            display: block;
+            width: 100%;
+            margin-top: 5px;
+            resize: none;
+        }
+       
+        & #input-submit {
+            color: white; 
+            background: $GREEN;
+            cursor: pointer;
+            margin-top: 30px;
+        }
+       
+        & textarea {
+            height: 232px;
+        }
+    } 
 }
 
 .jumbotron {
@@ -85,7 +156,7 @@ section.screenshoots {
     justify-content: center;
     height: 300px;
     margin-top: 2rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    //background-color: rgba(255, 255, 255, 0.5);
 
     & > h1 {
         color: rgba(0, 0, 0, 0.5);
@@ -93,10 +164,17 @@ section.screenshoots {
         font-family: 'Rubik Mono One', sans-serif;
         font-weight: bold;
     }
+
+    & ul { list-style: none; 
+        & > li {
+            margin-top: 15px
+        }
+    }
 }
 
 .info { margin-top: 3rem; }
 
+p.title { margin: 80px 0 30px 0}
 p.center { text-align: center; }
 
 /*
@@ -111,7 +189,7 @@ footer.footer {
     margin-bottom: 16px;
     text-align: center;
 
-    p, p a { font-size: 12px; }
+    p, p a { color: black; font-size: 12px; }
     a { color: black; text-decoration: none; }
     a.text:hover { padding: 5px 0; background: rgba(0, 0, 0, 0.05);  border-bottom: solid 2px $BLODY; }
     i.red { color: $BLODY; }
@@ -126,4 +204,44 @@ footer.footer {
         & > li:first-of-type { margin-left: 0; }
         & li > i:hover { color: $BLODY }
     }
+}
+
+/*  */
+.half {
+    float: left;
+    width: 48%;
+    margin-bottom: 1em;
+}
+
+.right { width: 50%; }
+
+.left {
+    margin-right: 2%; 
+}
+
+@media (max-width: 620px) {
+    .half {
+        width: 100%; 
+        float: none;
+        margin-bottom: 0;
+    }
+    section.contact {
+        p.title { margin: 10px 0 10px 0}
+        form {
+            margin: 20px 20px 0 20px;
+
+            textarea { height: 142px; }
+        }
+    }
+}
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
 }
