@@ -81,16 +81,21 @@ section.landing ul.description {
     color: #009688;
     margin-top: 30px; }
 
-section.screenshoots h1, section.screenshoots h2, section.screenshoots h3 {
-  text-align: center; }
-section.screenshoots .images {
+section.screenshoots {
   display: flex;
-  height: calc(100% - 110px);
   justify-content: center;
   align-items: center;
-  margin: 0 auto; }
-section.screenshoots img {
-  margin: 20px; }
+  height: calc(100% - 110px); }
+  section.screenshoots h1, section.screenshoots h2, section.screenshoots h3 {
+    text-align: center; }
+  section.screenshoots .images {
+    display: inline-block;
+    margin: 0 auto; }
+  section.screenshoots img {
+    margin-right: 10px;
+    margin-bottom: 10px; }
+  section.screenshoots img:last-of-type {
+    margin-right: unset; }
 
 section.contact h1, section.contact h2, section.contact h3 {
   text-align: center; }
