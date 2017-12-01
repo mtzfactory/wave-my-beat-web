@@ -28,7 +28,8 @@ ul { margin: 0; padding: 0; }
     min-height: 100%;
     position: relative;
 
-    background-image: linear-gradient(to bottom, rgba(239,239,239,0.8) 0%,rgba(239,239,239,0.8) 100%), url('../images/background.png');
+    //background-image: url('../images/background.png');
+    background-color: rgb(67,67,67);
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
@@ -48,7 +49,7 @@ ul { margin: 0; padding: 0; }
     margin: 0 30px;
     padding: 30px 0;
 
-    & h3 { color: black }
+    & h3 { color: $GREEN }
 
     & ul.nav {
         list-style: none;
@@ -58,9 +59,9 @@ ul { margin: 0; padding: 0; }
         & > li:before { content: "/"; padding-right: 1rem; font-size: 0.6rem; }
         & > li:first-of-type:before { content: ""; padding-right: 0; }
 
-        & a { padding: 5px 1rem; text-decoration: none; color: black }
-        & a.selected { border-bottom: solid 2px $GREEN; }
-        & a:hover { background: rgba(0, 0, 0, 0.1); border-bottom: solid 2px $GREEN; }
+        & a { padding: 5px 1rem; text-decoration: none; color: $GREEN }
+        & a.selected { border-bottom: solid 2px $BLODY; }
+        & a:hover { background: rgba(0, 0, 0, 0.1); border-bottom: solid 2px $BLODY; }
         & a:focus { color: rgb(66, 66, 63); }
     }
 }
@@ -68,26 +69,26 @@ ul { margin: 0; padding: 0; }
 section.landing {
     h1, h2, h3 {
         text-align: center;
+        color: $GREEN
     }
     & > h1 {
-        color: rgba(0, 0, 0, 0.5);
         font-size: 32px;  
         font-family: 'Rubik Mono One', sans-serif;
         font-weight: bold;
     }
-    .images {
+    & .flexy {
         display: flex;
-        
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-    img {
-        margin: 0 20px 0 20px;
+        justify-content: space-around
     }
 
     & ul.description {
-        & li { color: $GREEN }
+        list-style: none;
+        text-align: left;
+        margin: 0 20px;
+        & li {
+            color: $GREEN;
+            margin-top: 30px;
+        }
     }
 }
 
@@ -117,6 +118,8 @@ section.contact {
         margin: 20px auto;
 
         & .form-group { margin-top: 1em; }
+
+        & label { color: white }
 
         & input, & textarea {
             border:0; outline:0;
@@ -164,9 +167,9 @@ section.contact {
     }
 }
 
-.info { margin-top: 3rem; }
+.info { margin-top: 3rem; color: $GREEN }
 
-p.title { margin: 80px 0 30px 0}
+p.title { margin: 80px 0 30px 0; color: $GREEN }
 p.center { text-align: center; }
 
 /*
@@ -181,8 +184,8 @@ footer.footer {
     margin-bottom: 16px;
     text-align: center;
 
-    p, p a { color: black; font-size: 12px; }
-    a { color: black; text-decoration: none; }
+    p, p a { color: $GREEN; font-size: 12px; }
+    a { color: $GREEN; text-decoration: none; }
     a.text:hover { padding: 5px 0; background: rgba(0, 0, 0, 0.05);  border-bottom: solid 2px $GREEN; }
     i.red { color: $BLODY; }
     & .left { float: left; }
@@ -191,6 +194,7 @@ footer.footer {
         list-style: none;
         & li {
             display: inline-block; margin-left: 3rem;
+            & > a { color: rgba(240, 240, 240, 0.5) }
             & > a.ico:hover { color: $GREEN; border-bottom: solid 2px $BLODY; }
         }
         & > li:first-of-type { margin-left: 0; }
