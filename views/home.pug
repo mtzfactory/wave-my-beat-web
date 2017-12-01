@@ -1,12 +1,15 @@
 extends layout
 
+block link
+    -var selected = '/';
+
 block content
     section.landing
         h1 Wanna feel again the experience of 
         h1 sharing music?
         .jumbotron
-            ul
-                li Find new trending artists, play their full albums.
+            ul.description
+                li Find new trending songs, artists, play their full albums.
                 li Create your own playlists.
                 li SHARE your favorite song with your friends.
         .info

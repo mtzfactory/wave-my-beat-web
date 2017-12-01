@@ -23,17 +23,17 @@ const anchors = [
 
 web.get('/', (req, res) => {
     const CURRENT = 'home'
-    res.render(CURRENT, { title: 'Wave my beat', anchors: anchors, current: CURRENT })
+    res.render(CURRENT, { title: 'wavetronic', anchors: anchors, current: CURRENT })
 })
 
 web.get('/howitfeels', (req, res) => {
     const CURRENT = 'howitfeels'
-    res.render(CURRENT, { title: 'Wave my beat', anchors: anchors, current: CURRENT })
+    res.render(CURRENT, { title: 'wavetronic', anchors: anchors, current: CURRENT })
 })
 
 web.get('/contact', (req, res) => {
     const CURRENT = 'contact'
-    res.render(CURRENT, { title: 'Wave my beat', anchors: anchors, current: CURRENT })
+    res.render(CURRENT, { title: 'wavetronic', anchors: anchors, current: CURRENT })
 })
 
 module.exports = web

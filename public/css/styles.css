@@ -30,30 +30,6 @@ ul {
 .content {
   padding-bottom: 32px; }
 
-.table {
-  display: table;
-  width: 100%; }
-
-.cel {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle; }
-
-.cel-1-2 {
-  width: 50%; }
-  .cel-1-2 > h1, .cel-1-2 h2, .cel-1-2 h3 {
-    margin: 0; }
-
-.cel-1-3 {
-  width: 33.3%; }
-  .cel-1-3 > h1, .cel-1-3 h2, .cel-1-3 h3 {
-    margin: 0; }
-
-.cel-2-3 {
-  width: 66.6%; }
-  .cel-2-3 > h1, .cel-2-3 h2, .cel-2-3 h3 {
-    margin: 0; }
-
 /*
  -- HEADER
  */
@@ -79,9 +55,11 @@ header.header {
       padding: 5px 1rem;
       text-decoration: none;
       color: black; }
+    header.header ul.nav a.selected {
+      border-bottom: solid 2px #009688; }
     header.header ul.nav a:hover {
       background: rgba(0, 0, 0, 0.1);
-      border-bottom: solid 2px #E91E63; }
+      border-bottom: solid 2px #009688; }
     header.header ul.nav a:focus {
       color: #42423f; }
 
@@ -99,6 +77,8 @@ section.landing .images {
   margin: 0 auto; }
 section.landing img {
   margin: 0 20px 0 20px; }
+section.landing ul.description li {
+  color: #009688; }
 
 section.screenshoots h1, section.screenshoots h2, section.screenshoots h3 {
   text-align: center; }
@@ -181,7 +161,7 @@ footer.footer {
   footer.footer a.text:hover {
     padding: 5px 0;
     background: rgba(0, 0, 0, 0.05);
-    border-bottom: solid 2px #E91E63; }
+    border-bottom: solid 2px #009688; }
   footer.footer i.red {
     color: #E91E63; }
   footer.footer .left {
@@ -194,12 +174,37 @@ footer.footer {
       display: inline-block;
       margin-left: 3rem; }
       footer.footer ul li > a.ico:hover {
-        color: #0375B4;
+        color: #009688;
         border-bottom: solid 2px #E91E63; }
     footer.footer ul > li:first-of-type {
       margin-left: 0; }
     footer.footer ul li > i:hover {
-      color: #E91E63; }
+      color: #009688; }
+
+/*  */
+.table {
+  display: table;
+  width: 100%; }
+
+.cel {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle; }
+
+.cel-1-2 {
+  width: 50%; }
+  .cel-1-2 > h1, .cel-1-2 h2, .cel-1-2 h3 {
+    margin: 0; }
+
+.cel-1-3 {
+  width: 33.3%; }
+  .cel-1-3 > h1, .cel-1-3 h2, .cel-1-3 h3 {
+    margin: 0; }
+
+.cel-2-3 {
+  width: 66.6%; }
+  .cel-2-3 > h1, .cel-2-3 h2, .cel-2-3 h3 {
+    margin: 0; }
 
 /*  */
 .half {
