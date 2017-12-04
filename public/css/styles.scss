@@ -3,6 +3,7 @@
 
 $SKY: #CAEBF2;
 $CARBON: #A9A9A9;
+$OLDCARBON: rgb(67,67,67);
 $WATERMELON: #FF3B3F;
 $NEUTRAL: #EFEFEF;
 $BLODY: #E91E63;
@@ -19,27 +20,38 @@ $GREEN: #009688;
 html, body{
     height: 100%;
     margin: 0;
-    background-color: $NEUTRAL;
+    background-color: $OLDCARBON;
+}
+
+/* body:before will also work as will body:after */
+:root:before {
+    content: url(../images/Screenshot_2.png)
+             url(../images/Screenshot_3.png)
+             url(../images/Screenshot_4.png)
+             url(../images/Screenshot_7.png)
+             url(../images/Screenshot_8.png)
+             url(../images/cassette.png);
+    /* partial fallback */
+    background-image: url(../images/Screenshot_2.png);
+    visibility: hidden;
+    position: absolute;
+    left: -999em;
 }
 
 ul { margin: 0; padding: 0; }
+.info { margin-top: 3rem; color: $GREEN }
+p.title { margin: 80px 0 30px 0; color: $GREEN }
+p.center { text-align: center; }
 
 .container {
     min-height: 100%;
     position: relative;
-
-    //background-image: url('../images/background.png');
     background-color: rgb(67,67,67);
-    background-repeat: no-repeat;
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 
     width: 100%;
     height: 100%;
 }
+
 .content { padding-bottom: $FOOTER_HEIGHT; }
 
 /*
@@ -56,7 +68,7 @@ ul { margin: 0; padding: 0; }
         text-align: center;
 
         & > li { display: inline-block; margin-left: 1rem; }
-        & > li:before { content: "/"; padding-right: 1rem; font-size: 0.6rem; }
+        & > li:before { content: "/"; padding-right: 1rem; font-size: 0.6rem; color: $GREEN }
         & > li:first-of-type:before { content: ""; padding-right: 0; }
 
         & a { padding: 5px 1rem; text-decoration: none; color: $GREEN }
@@ -66,6 +78,9 @@ ul { margin: 0; padding: 0; }
     }
 }
 
+/*
+ -- SECTIONS
+*/
 section.landing {
     h1, h2, h3 {
         text-align: center;
@@ -146,34 +161,6 @@ section.contact {
         }
     } 
 }
-
-.jumbotron {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    margin-top: 2rem;
-    //background-color: rgba(255, 255, 255, 0.5);
-
-    & > h1 {
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 48px;  
-        font-family: 'Rubik Mono One', sans-serif;
-        font-weight: bold;
-    }
-
-    & ul { list-style: none; 
-        & > li {
-            margin-top: 15px
-        }
-    }
-}
-
-.info { margin-top: 3rem; color: $GREEN }
-
-p.title { margin: 80px 0 30px 0; color: $GREEN }
-p.center { text-align: center; }
 
 /*
  -- FOOTER
