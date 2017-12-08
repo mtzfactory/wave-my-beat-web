@@ -1,45 +1,47 @@
 html
     head
         meta(charset="UTF-8")
-        meta(name="theme-color", content="#E91E63")
+        meta(name="theme-color", content="#009688")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
         link(rel="stylesheet", href="/css/styles.css")
         title=title
     body
         block link
             -var selected = '/';
 
-        header.header
-            .table
-                .cel.cel-1-3: h3 WAVETRONIC
-                .cel.cel-2-3: ul.nav
-                    each anchor in anchors
-                        li
-                            if selected === anchor.link
-                                a.selected(href=anchor.link) #{anchor.text}
-                            else
-                                a(href=anchor.link) #{anchor.text}
+        .container
+            header.header
+                .table
+                    .cel.cel-1-3: h3 WAVETRONIC
+                    .cel.cel-2-3: ul.nav
+                        each anchor in anchors
+                            li
+                                if selected === anchor.link
+                                    a.selected(href=anchor.link) #{anchor.text}
+                                else
+                                    a(href=anchor.link) #{anchor.text}
 
-        .content
-            block content
-        
-        footer.footer
-            .table
-                .cel.cel-1-3: p hecho con 
-                    i(class="fa fa-heart red")
-                    |  por    
-                    a.text(href="mailto:ricardo.martinez.monje@gmail.com") Ricardo Martínez
+            .content
+                block content
+            
+            footer.footer
+                .table
+                    .cel.cel-1-3: p hecho con 
+                        i(class="fa fa-heart red")
+                        |  por    
+                        a.text(href="mailto:ricardo.martinez.monje@gmail.com") Ricardo Martínez
 
-                .cel.cel-2-3: ul
-                    li: a.ico(href="https://www.linkedin.com/in/ricardomartinezmonje/", target="_blank")
-                        i(class="fa fa-2x fa-linkedin" aria-hidden="true")
-                    li: a.ico(href="https://github.com/mtzfactory", target="_blank")
-                        i(class="fa fa-2x fa-github" aria-hidden="true")
-                    li: a.ico(href="https://www.facebook.com/mtzFactory", target="_blank")
-                        i(class="fa fa-2x fa-facebook-official" aria-hidden="true")
-                    li: a.ico(href="https://twitter.com/mtz1976", target="_blank")
-                        i(class="fa fa-2x fa-twitter" aria-hidden="true")
-                    li: a(href="http://www.skylabcoders.com", target="_blank")
-                        img(src="./images/skylab-coders-grey.png", height=28)
+                    .cel.cel-2-3: ul
+                        li: a.ico(href="https://www.linkedin.com/in/ricardomartinezmonje/", target="_blank")
+                            i(class="fa fa-2x fa-linkedin" aria-hidden="true")
+                        li: a.ico(href="https://github.com/mtzfactory", target="_blank")
+                            i(class="fa fa-2x fa-github" aria-hidden="true")
+                        li: a.ico(href="https://www.facebook.com/mtzFactory", target="_blank")
+                            i(class="fa fa-2x fa-facebook-official" aria-hidden="true")
+                        li: a.ico(href="https://twitter.com/mtz1976", target="_blank")
+                            i(class="fa fa-2x fa-twitter" aria-hidden="true")
+                        li: a(href="http://www.skylabcoders.com", target="_blank")
+                            img(src="./images/skylab-coders-grey.png", height=28)
 
     //- script(type="text/javascript" src="")
     //- script(type='text/javascript', src='/vendor/jquery/1.12.4/jquery.min.js')
