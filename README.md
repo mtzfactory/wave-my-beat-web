@@ -25,7 +25,7 @@ Para instalar este proyecto:
 
 ### CAPTURAS
 
-![screenshot-1](screenshots/screenshot-1.png)
+![screenshot-1](screenshots/Screenshot-1.png)
 
 #### SkylabCoders Academy - Full Stack Web Development Bootcamp
 
